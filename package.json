@@ -1,0 +1,30 @@
+{
+  "name": "alfred",
+  "version": "0.0.0",
+  "description": "alfred ======",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^5.1.0",
+    "joi": "^4.6.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sails-linker": "^0.9.5"
+  },
+  "scripts": {
+    "start": "nodemon .",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://TylerGarlick@github.com/TylerGarlick/alfred.git"
+  },
+  "author": "Tyler Garlick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/alfred/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/alfred"
+}
