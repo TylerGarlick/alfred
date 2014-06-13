@@ -4,8 +4,12 @@
   "description": "alfred ======",
   "main": "index.js",
   "dependencies": {
-    "hapi": "^5.1.0",
-    "joi": "^4.6.0"
+    "boom": "^2.4.2",
+    "good": "^2.1.2",
+    "hapi": "^6.0.1",
+    "joi": "^4.6.0",
+    "lout": "^5.0.0",
+    "poop": "^1.2.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

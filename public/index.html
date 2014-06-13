@@ -17,8 +17,7 @@
   <![endif]-->
 </head>
 <body>
-
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar navbar-default navbar-fixed-top navbar-top-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,24 +39,13 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">Overview</a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Export</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-9 col-md-10 main-content">
-        <div ng-view></div>
-      </div>
-    </div>
-
+    <div ng-view></div>
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="components/jquery/dist/jquery.js"></script>
+  <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="components/angular/angular.js"></script>

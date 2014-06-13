@@ -317,6 +317,10 @@ img {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -1692,16 +1696,35 @@ output {
   background-image: none;
   border: 1px solid #cccccc;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control:-ms-input-placeholder {
+  color: #aaaaaa;
 }
 .form-control::-moz-placeholder {
   color: #999999;
@@ -1841,11 +1864,17 @@ select[multiple].input-lg {
 }
 .has-success .form-control {
   border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
   border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #67b168;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #67b168;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
@@ -1867,11 +1896,17 @@ select[multiple].input-lg {
 }
 .has-warning .form-control {
   border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
   border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #c0a16b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #c0a16b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
@@ -1893,11 +1928,17 @@ select[multiple].input-lg {
 }
 .has-error .form-control {
   border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
   border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #ce8483;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 6px #ce8483;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
@@ -2017,6 +2058,9 @@ select[multiple].input-lg {
 .btn.active {
   outline: 0;
   background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
@@ -2025,8 +2069,14 @@ select[multiple].input-lg {
 fieldset[disabled] .btn {
   cursor: not-allowed;
   pointer-events: none;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.65;
   filter: alpha(opacity=65);
+  -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2287,6 +2337,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-link[disabled],
 fieldset[disabled] .btn-link {
   background-color: transparent;
+  -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2346,6 +2397,10 @@ input[type="button"].btn-block {
 }
 .fade {
   opacity: 0;
+  -webkit-transition: opacity 0s linear;
+  -moz-transition: opacity 0s linear;
+  -o-transition: opacity 0s linear;
+  transition: opacity 0s linear;
   -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
@@ -2362,6 +2417,10 @@ input[type="button"].btn-block {
   position: relative;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 0s ease;
+  -moz-transition: height 0s ease;
+  -o-transition: height 0s ease;
+  transition: height 0s ease;
   -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
@@ -3013,6 +3072,9 @@ input[type="button"].btn-block {
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -3204,10 +3266,14 @@ input[type="button"].btn-block {
   padding-right: 12px;
 }
 .btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-group.open .dropdown-toggle.btn-link {
+  -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3832,6 +3898,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0), 0 1px 0 rgba(255, 255, 255, 0);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0), 0 1px 0 rgba(255, 255, 255, 0);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0), 0 1px 0 rgba(255, 255, 255, 0);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
@@ -3885,6 +3954,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
@@ -4397,6 +4467,10 @@ a.list-group-item.active > .badge,
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -4509,6 +4583,9 @@ a.thumbnail.active {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -4521,8 +4598,15 @@ a.thumbnail.active {
   color: #ffffff;
   text-align: center;
   background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  transition: width 1s ease;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
@@ -4532,6 +4616,8 @@ a.thumbnail.active {
   background-size: 40px 40px;
 }
 .progress.active .progress-bar {
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
   -webkit-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
@@ -4748,6 +4834,9 @@ a.list-group-item-danger.active:focus {
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -5031,6 +5120,9 @@ a.list-group-item-danger.active:focus {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -5053,6 +5145,11 @@ a.list-group-item-danger.active:focus {
   line-height: 1;
   color: #000000;
   text-shadow: 0 1px 0 #ffffff;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
@@ -5061,6 +5158,11 @@ a.list-group-item-danger.active:focus {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -5088,6 +5190,8 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
+  -moz-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
@@ -5097,6 +5201,8 @@ button.close {
   transition: transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
@@ -5112,6 +5218,9 @@ button.close {
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px #000000;
+  -moz-box-shadow: 0 3px 9px #000000;
+  box-shadow: 0 3px 9px #000000;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -5127,10 +5236,18 @@ button.close {
   background-color: #000000;
 }
 .modal-backdrop.fade {
+  zoom: 1;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
   opacity: 0;
   filter: alpha(opacity=0);
 }
 .modal-backdrop.in {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -5172,6 +5289,9 @@ button.close {
     margin: 30px auto;
   }
   .modal-content {
+    -webkit-box-shadow: 0 5px 15px #000000;
+    -moz-box-shadow: 0 5px 15px #000000;
+    box-shadow: 0 5px 15px #000000;
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -5191,10 +5311,18 @@ button.close {
   visibility: visible;
   font-size: 12px;
   line-height: 1.4;
+  zoom: 1;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
   opacity: 0;
   filter: alpha(opacity=0);
 }
 .tooltip.in {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -5296,6 +5424,9 @@ button.close {
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
@@ -5412,6 +5543,10 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
+  -webkit-transition: 1s ease-in-out left;
+  -moz-transition: 1s ease-in-out left;
+  -o-transition: 1s ease-in-out left;
+  transition: 1s ease-in-out left;
   -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
@@ -5455,6 +5590,11 @@ button.close {
   left: 0;
   bottom: 0;
   width: 15%;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
@@ -5481,6 +5621,11 @@ button.close {
   outline: none;
   color: #ffffff;
   text-decoration: none;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -5771,6 +5916,16 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+body {
+  padding-top: 50px;
+}
+.navbar-top-default {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 .main-content {
   padding-top: 70px;
