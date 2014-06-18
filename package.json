@@ -9,6 +9,7 @@
     "hapi": "^6.0.1",
     "joi": "^4.6.0",
     "lout": "^5.0.0",
+    "mongoose": "^3.8.12",
     "poop": "^1.2.0"
   },
   "devDependencies": {
