@@ -8,6 +8,7 @@
 
   <!-- Bootstrap -->
   <link href="css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="components/angular-motion/dist/angular-motion.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +18,7 @@
   <![endif]-->
 </head>
 <body>
-  <div class="navbar navbar-default navbar-fixed-top navbar-top-default" role="navigation">
+  <div class="navbar navbar-inverse navbar-fixed-top navbar-top-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,19 +29,40 @@
         </button>
         <a class="navbar-brand" href="/">Alfred</a>
       </div>
+
       <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#!/outreach/trainings">Outreach</a></li>
+          <li><a href="#">Shelter</a></li>
+          <li><a href="#">Hotline</a></li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Help</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </div>
+
   <div class="container-fluid">
     <div ng-view></div>
   </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+
+    </div>
+  </nav>
+
+
+
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="components/jquery/dist/jquery.js"></script>
@@ -50,11 +72,16 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="components/angular/angular.js"></script>
   <script src="components/angular-route/angular-route.js"></script>
+  <script src="components/angular-strap/dist/angular-strap.js"></script>
+  <script src="components/angular-strap/dist/angular-strap.tpl.js"></script>
 
   <!--SCRIPTS-->
   <script src="app/app.js"></script>
   <script src="app/common/errors/controllers.js"></script>
   <script src="app/dashboard/controllers.js"></script>
+  <script src="app/outreach/trainings/controllers.js"></script>
+  <script src="app/settings/common/controllers.js"></script>
+  <script src="app/settings/training/controllers.js"></script>
   <!--SCRIPTS END-->
 </body>
 </html>

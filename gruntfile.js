@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     },
     watch: {
       css: {
-        files: 'public/css/**/*.less',
+        files: 'public/**/*.less',
         tasks: ['less'],
         options: {
           livereload: true
@@ -54,4 +54,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['less', 'sails-linker', 'watch']);
+//  grunt.registerTask('default', ['less', 'sails-linker']);
 };

@@ -1,12 +1,13 @@
 'use strict';
-var Hapi = require('hapi');
 
+var Hapi = require('hapi');
+var Router = require('./lib/config/router');
 var port = process.env.PORT || 3000;
 var server = new Hapi.Server(port, { cors: true, files: { relativeTo: __dirname } });
 
-server.route([
-  { method: 'GET', path: '/{path*}', handler: { directory: { path: './public', listing: true } } }
-]);
+Router.setup(server);
+
+
 
 server.pack.register([
   { plugin: require('lout') },

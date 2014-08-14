@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-md-2 col-sm-3">
+    <div ng-include="'app/outreach/common/menu.html'"></div>
+  </div>
+  <div class="col-md-10 col-sm-9">
+    <h2>{{ title }}</h2>
+
+    <form>
+
+      <div class="row">
+        <div class="col-sm-9 col-xs-12">
+          <div class="form-group">
+            <label class="control-label">Training Type</label>
+            <select class="form-control" ng-model="training.type" ng-options="type.name for type in types"></select>
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-12">
+          <div class="form-group">
+            <label class="control-label">Training Date</label>
+            <input type="text" class="form-control" ng-model="training.occurredAt" name="date" bs-datepicker/>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-9 col-xs-12">
+          <div class="form-group">
+            <label class="control-label">Training Category</label>
+            <select class="form-control" ng-model="training.category" ng-options="category.name for category in training.type.categories"></select>
+          </div>
+          <div class="form-group" ng-show="training.category.name === 'Other'">
+            <input class="form-control" type="text" ng-model="training.category.value"/>
+          </div>
+        </div>
+      </div>
+
+      <h3>Training Content</h3>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-3">
+          <h4>Assault and Violence</h4>
+
+          <div class="well well-sm">
+            <ul class="list list-unstyled">
+              <li ng-repeat="topic in training.type.assaultTopics">
+                <label>
+                  <input type="checkbox" name="assaultTopics[]" value="{{topic}}" ng-checked="assaultTopics.indexOf(topic) > -1" ng-click="toggleSelection(topic, 'assaultTopics')"/>
+                  {{topic}}
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <h4>Justice System</h4>
+
+          <div class="well well-sm">
+            <ul class="list list-unstyled">
+              <li ng-repeat="topic in training.type.justiceSystemTopics">
+                <label>
+                  <input type="checkbox" name="justiceSystemTopics[]" value="{{topic}}" ng-checked="justiceSystemTopics.indexOf(topic) > -1" ng-click="toggleSelection(topic, 'justiceSystemTopics')"/>
+                  {{topic}}
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <h4>Underserved Populations</h4>
+
+          <div class="well well-sm">
+            <ul class="list list-unstyled">
+              <li ng-repeat="topic in training.type.underservedPopulationTopics">
+                <label>
+                  <input type="checkbox" name="underservedPopulationTopics[]" value="{{topic}}" ng-checked="underservedPopulationTopics.indexOf(topic) > -1" ng-click="toggleSelection(topic, 'underservedPopulationTopics')"/>
+                  {{topic}}
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <h4>Community Response</h4>
+
+          <div class="well well-sm">
+            <ul class="list list-unstyled">
+              <li ng-repeat="topic in training.type.communityResponseTopics">
+                <label>
+                  <input type="checkbox" name="communityResponseTopics[]" value="{{topic}}" ng-checked="communityResponseTopics.indexOf(topic) > -1" ng-click="toggleSelection(topic, 'communityResponseTopics')"/>
+                  {{topic}}
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg" type="submit">Save</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
